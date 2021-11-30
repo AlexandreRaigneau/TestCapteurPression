@@ -2,19 +2,14 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('Run app') {
             steps {
-                echo 'Building..'
+                python app.py
             }
         }
-        stage('Test') {
+        stage('Test with Robotframework') {
             steps {
-                echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
+                python -m robot test.robot
             }
         }
     }
