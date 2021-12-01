@@ -7,10 +7,10 @@ pipeline {
                 python3 app.py
             }
         }
-        stage('Test with Robotframework') {
-            steps {
-                python3 -m robot test.robot
-            }
-        }
+        // stage('Test with Robotframework') {
+        //     steps {
+        //         python3 -m robot test.robot
+        //     }
+        // }
     }
 }
