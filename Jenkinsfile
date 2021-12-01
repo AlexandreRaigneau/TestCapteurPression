@@ -4,12 +4,12 @@ pipeline {
     stages {
         stage('Run app') {
             steps {
-                python app.py
+                python3 app.py
             }
         }
         stage('Test with Robotframework') {
             steps {
-                python -m robot test.robot
+                python3 -m robot test.robot
             }
         }
     }
